@@ -1,11 +1,12 @@
 import datetime
 from flask import Flask, render_template, request
 from pymongo import MongoClient
-import certifi
+# import certifi
 
 def create_app():
     app = Flask(__name__)
-    client = MongoClient('mongodb+srv://padmin:l0ganr04@josh-portfolio.xykc408.mongodb.net/test', tlsCAFile=certifi.where())
+    # client = MongoClient('mongodb+srv://padmin:l0ganr04@josh-portfolio.xykc408.mongodb.net/test', tlsCAFile=certifi.where())
+    client = MongoClient('mongodb+srv://padmin:l0ganr04@josh-portfolio.xykc408.mongodb.net/test')
     app.db = client.portfolio
 
     @app.route('/', methods=['GET', 'POST'])
