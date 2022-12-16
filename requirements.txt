@@ -3,3 +3,4 @@ pymongo[srv]
 certifi
 gunicorn
 pymongo
+python-dotenv
